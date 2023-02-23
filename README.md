@@ -2,11 +2,11 @@
 
 > ## Rotas
 
-3. [Cadastrar dispositivo](./requirements/create-device.md)
-3. [Atualizar dispositivo](./requirements/update-device.md)
-4. [Listar dispositivos](./requirements/get-all-device.md)
-5. [Listar um dispositivo através do Id](./requirements/get-by-id-device.md)
-6. [Remover dispositivo](./requirements/remove-device.md)
+1. [Cadastrar dispositivo](./requirements/create-device.md)
+2. [Atualizar dispositivo](./requirements/update-device.md)
+3. [Listar dispositivos](./requirements/get-all-device.md)
+4. [Listar um dispositivo através do Id](./requirements/get-by-id-device.md)
+5. [Remover dispositivo](./requirements/remove-device.md)
 
 # Iniciar Projeto Localmente
 
