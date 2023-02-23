@@ -1,0 +1,27 @@
+version: "3"
+services:
+  mongo:
+    container_name: mongo-api-manage-devices-container
+    image: mongo:latest
+    command: mongod --port 27018
+    restart: always
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27018:27018"
+  api:
+    container_name: api-manage-devices-container
+    image: node:12
+    working_dir: /usr/src/api-manage-devices
+    restart: always
+    command: bash -c "npm install --only=prod && npm run debug"
+    environment:
+      - MONGO_URL=mongodb://mongo:27018/api-manage-devices
+    volumes:
+      - ./dist/:/usr/src/api-manage-devices/dist/
+      - ./package.json:/usr/src/api-manage-devices/package.json
+    ports:
+      - "5051:5051"
+      - "9223:9223"
+    links:
+      - mongo
